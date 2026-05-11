@@ -74,9 +74,7 @@
         }
 
         .container { padding: 0 15px 15px 15px; max-width: 600px; margin: auto; }
-        
         .main-savings-banner { background: #fff; margin: 0 15px 15px 15px; padding: 12px; border-radius: 12px; text-align: center; border: 1px dashed var(--accent); display: none; }
-
         .product-card { background: white; padding: 12px; margin-bottom: 12px; border-radius: 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #eee; }
         .product-img { width: 75px; height: 75px; object-fit: contain; border-radius: 10px; border: 1px solid #f0f0f0; }
         .info { flex-grow: 1; }
@@ -85,7 +83,6 @@
         .p-offer { color: #2ecc71; font-weight: 800; font-size: 1.05rem; }
         .p-mrp { color: var(--text-muted); text-decoration: line-through; font-size: 0.8rem; }
         .p-save-tag { background: #fff3f2; color: var(--accent); font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; font-weight: bold; border: 1px solid #ffdcd9; }
-
         .add-btn { background: var(--primary); color: white; border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
 
         .cart-fab { position: fixed; bottom: 25px; right: 25px; background: var(--primary); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; cursor: pointer; }
@@ -96,14 +93,18 @@
         .cart-header { padding: 20px; background: var(--primary); color: white; display: flex; justify-content: space-between; align-items: center; }
         .cart-items-list { flex-grow: 1; overflow-y: auto; padding: 15px; }
         
-        .qty-controls { display: flex; align-items: center; background: #f1f3f4; border-radius: 8px; padding: 2px; }
-        .qty-btn { width: 30px; height: 30px; border: none; background: white; border-radius: 5px; font-weight: bold; cursor: pointer; color: var(--primary); }
-        .qty-val { margin: 0 10px; font-weight: bold; }
+        .address-section { padding: 15px; background: #fff; border-top: 1px solid #eee; }
+        .address-section label { display: block; font-weight: bold; margin-bottom: 8px; font-size: 0.9rem; color: var(--primary); }
+        #customer-address { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 0.9rem; resize: none; box-sizing: border-box; }
 
         .cart-footer { padding: 20px; border-top: 1px solid #eee; background: #fff; }
         .summary-row { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.95rem; }
         .total-row { display: flex; justify-content: space-between; font-size: 1.3rem; margin-top: 10px; margin-bottom: 15px; font-weight: 800; border-top: 1px solid #eee; padding-top: 10px; }
         .wa-btn { background: var(--success); color: white; display: block; text-align: center; padding: 16px; border-radius: 12px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
+
+        .qty-controls { display: flex; align-items: center; background: #f1f3f4; border-radius: 8px; padding: 2px; }
+        .qty-btn { width: 30px; height: 30px; border: none; background: white; border-radius: 5px; font-weight: bold; cursor: pointer; color: var(--primary); }
+        .qty-val { margin: 0 10px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -118,9 +119,7 @@
         <input type="text" id="product-search" placeholder="Search for items..." oninput="handleFilter()">
         <button class="clear-search" id="clear-btn" onclick="clearSearch()">✕</button>
     </div>
-    
-    <select id="category-dropdown" onchange="handleFilter()">
-        </select>
+    <select id="category-dropdown" onchange="handleFilter()"></select>
 </div>
 
 <div class="main-savings-banner" id="main-save-banner">
@@ -144,6 +143,12 @@
         <button onclick="toggleCart()" style="background:none; border:none; color:white; font-size:1.8rem; cursor:pointer;">✕</button>
     </div>
     <div class="cart-items-list" id="cart-items-content"></div>
+    
+    <div class="address-section">
+        <label for="customer-address">📍 Delivery Address:</label>
+        <textarea id="customer-address" rows="3" placeholder="Enter your full address and landmark..."></textarea>
+    </div>
+
     <div class="cart-footer">
         <div class="summary-row" style="color: var(--text-muted);"><span>Total MRP:</span><span>₹<span id="cart-mrp">0</span></span></div>
         <div class="summary-row" style="color: var(--accent); font-weight: bold;"><span>Your Savings:</span><span>-₹<span id="cart-savings">0</span></span></div>
@@ -154,79 +159,57 @@
 
 <script>
     const jsonURL = "https://raw.githubusercontent.com/sureshvdpi-rgb/praven/refs/heads/main/products.json";
-
-    let products = [];
-    let categories = [];
-    let cart = {};
+    let products = [], categories = [], cart = {};
 
     async function loadData() {
         try {
             const response = await fetch(jsonURL);
             const data = await response.json();
             
-            // Check if JSON is new format or old format
+            // Handle both array format and object format for safety
             if (Array.isArray(data)) {
-                // OLD FORMAT: Auto-convert for safety
                 products = data;
-                categories = [...new Set(data.flatMap(p => p.category))]; 
+                categories = [...new Set(data.flatMap(p => p.category))];
             } else {
-                // NEW FORMAT
                 products = data.products || [];
                 categories = data.categories || [];
             }
-            
             renderDropdown();
             handleFilter();
         } catch (e) {
-            document.getElementById('shop-list').innerHTML = `<p style='text-align:center; color:red;'>Error: ${e.message}</p>`;
+            document.getElementById('shop-list').innerHTML = `<p style='text-align:center; color:red;'>Error loading data.</p>`;
         }
     }
 
     function renderDropdown() {
         const dropdown = document.getElementById('category-dropdown');
         let options = '<option value="All">All Categories</option>';
-        categories.forEach(cat => {
-            options += `<option value="${cat}">${cat}</option>`;
-        });
+        categories.forEach(cat => options += `<option value="${cat}">${cat}</option>`);
         dropdown.innerHTML = options;
     }
 
     function handleFilter() {
         const searchTerm = document.getElementById('product-search').value.toLowerCase();
         const selectedCat = document.getElementById('category-dropdown').value;
-        const clearBtn = document.getElementById('clear-btn');
-        
-        clearBtn.style.display = searchTerm.length > 0 ? 'flex' : 'none';
+        document.getElementById('clear-btn').style.display = searchTerm.length > 0 ? 'flex' : 'none';
 
         const filtered = products.filter(p => {
-            const matchesCategory = (selectedCat === 'All' || 
-                                     (Array.isArray(p.category) ? p.category.includes(selectedCat) : p.category === selectedCat));
-            
+            // Multi-category search support
+            const matchesCategory = (selectedCat === 'All' || (Array.isArray(p.category) ? p.category.includes(selectedCat) : p.category === selectedCat));
             const catString = Array.isArray(p.category) ? p.category.join(' ').toLowerCase() : (p.category ? p.category.toLowerCase() : "");
-            const matchesSearch = p.name.toLowerCase().includes(searchTerm) || catString.includes(searchTerm);
-            
-            return matchesCategory && matchesSearch;
+            return matchesCategory && (p.name.toLowerCase().includes(searchTerm) || catString.includes(searchTerm));
         });
-
         renderShop(filtered);
     }
 
-    function clearSearch() {
-        document.getElementById('product-search').value = '';
-        handleFilter();
-    }
+    function clearSearch() { document.getElementById('product-search').value = ''; handleFilter(); }
 
     function renderShop(data) {
         const list = document.getElementById('shop-list');
-        if (data.length === 0) {
-            list.innerHTML = `<p style="text-align:center; padding:50px; color:#888;">No items found.</p>`;
-            return;
-        }
-
-        list.innerHTML = data.map(p => {
-            const save = p.mrp - p.price;
-            return `
-                <div class="product-card">
+        list.innerHTML = data.length === 0 ? `<p style="text-align:center; padding:50px; color:#888;">No items found.</p>` : 
+            data.map(p => {
+                const save = p.mrp - p.price;
+                return `<div class="product-card">
                     <img src="${p.img}" class="product-img" onerror="this.src='https://via.placeholder.com/90'">
                     <div class="info">
                         <span class="p-name">${p.name}</span>
@@ -238,11 +221,11 @@
                     </div>
                     <button class="add-btn" onclick="updateQty(${p.id}, 1)">ADD +</button>
                 </div>`;
-        }).join('');
+            }).join('');
     }
 
     function toggleCart() { document.getElementById('cart-page').classList.toggle('active'); renderCart(); }
-
+    
     function updateQty(id, change) {
         cart[id] = (cart[id] || 0) + change;
         if (cart[id] <= 0) delete cart[id];
@@ -251,7 +234,7 @@
     }
 
     function updateSummary() {
-        let totalItems = 0, totalSavings = 0, totalPayable = 0, totalMRP = 0;
+        let totalItems = 0, totalPayable = 0, totalMRP = 0;
         for (let id in cart) {
             const p = products.find(prod => prod.id == id);
             if(p) {
@@ -260,40 +243,35 @@
                 totalPayable += (p.price * cart[id]);
             }
         }
-        totalSavings = totalMRP - totalPayable;
         document.getElementById('cart-count').innerText = totalItems;
-        const banner = document.getElementById('main-save-banner');
-        banner.style.display = totalSavings > 0 ? 'block' : 'none';
-        document.getElementById('main-save-amt').innerText = totalSavings;
+        document.getElementById('main-save-banner').style.display = (totalMRP - totalPayable) > 0 ? 'block' : 'none';
+        document.getElementById('main-save-amt').innerText = totalMRP - totalPayable;
         document.getElementById('cart-mrp').innerText = totalMRP;
-        document.getElementById('cart-savings').innerText = totalSavings;
+        document.getElementById('cart-savings').innerText = totalMRP - totalPayable;
         document.getElementById('cart-total').innerText = totalPayable;
     }
 
     function renderCart() {
         const content = document.getElementById('cart-items-content');
-        const cartIds = Object.keys(cart);
-        if(cartIds.length === 0) { content.innerHTML = "<p style='text-align:center; padding:50px; color:#888;'>Cart is empty</p>"; return; }
-        content.innerHTML = cartIds.map(id => {
-            const p = products.find(prod => prod.id == id);
-            const qty = cart[id];
-            return `
-                <div class="product-card">
-                    <div class="info">
-                        <span class="p-name">${p.name}</span>
-                        <span class="p-offer">₹${p.price * qty}</span>
-                        <div style="font-size:0.7rem; color:var(--accent);">Saved ₹${(p.mrp - p.price) * qty}</div>
-                    </div>
+        const ids = Object.keys(cart);
+        content.innerHTML = ids.length === 0 ? "<p style='text-align:center; padding:50px; color:#888;'>Cart is empty</p>" :
+            ids.map(id => {
+                const p = products.find(prod => prod.id == id);
+                return `<div class="product-card">
+                    <div class="info"><span class="p-name">${p.name}</span><span class="p-offer">₹${p.price * cart[id]}</span></div>
                     <div class="qty-controls">
                         <button class="qty-btn" onclick="updateQty(${p.id}, -1)">-</button>
-                        <span class="qty-val">${qty}</span>
+                        <span class="qty-val">${cart[id]}</span>
                         <button class="qty-btn" onclick="updateQty(${p.id}, 1)">+</button>
                     </div>
                 </div>`;
-        }).join('');
+            }).join('');
     }
 
     function sendOrder() {
+        const address = document.getElementById('customer-address').value.trim();
+        if (!address) { alert("Please enter your delivery address!"); return; }
+        
         let msg = "*ORDER: SS SCHOOL NEEDS*%0a--------------------------%0a";
         let totalPayable = 0, totalMrp = 0;
         for (let id in cart) {
@@ -303,7 +281,7 @@
             totalMrp += (p.mrp * cart[id]);
             msg += `• *${p.name}* x ${cart[id]} = ₹${sub}%0a`;
         }
-        msg += `--------------------------%0a*Subtotal:* ₹${totalMrp}%0a*Savings:* -₹${totalMrp - totalPayable}%0a*FINAL TOTAL: ₹${totalPayable}*%0a--------------------------%0aPlease confirm!`;
+        msg += `--------------------------%0a*Subtotal:* ₹${totalMrp}%0a*Savings:* -₹${totalMrp - totalPayable}%0a*FINAL TOTAL: ₹${totalPayable}*%0a--------------------------%0a*DELIVERY ADDRESS:*%0a${encodeURIComponent(address)}%0a--------------------------%0aPlease confirm!`;
         window.open(`https://wa.me/918438553395?text=${msg}`);
     }
 
