@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Manage Shop</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; background: #eee; }
+        .admin-box { background: white; padding: 20px; border-radius: 10px; max-width: 500px; margin: auto; }
+        input { width: 100%; padding: 10px; margin: 10px 0; box-sizing: border-box; }
+        .item-row { display: flex; justify-content: space-between; background: #fff; padding: 10px; margin-top: 10px; border-radius: 5px; }
+        .del-btn { color: red; cursor: pointer; border: none; background: none; }
+    </style>
+</head>
+<body>
+
+<div class="admin-box">
+    <h2>Shop Manager</h2>
+    <input type="text" id="name" placeholder="Item Name">
+    <input type="number" id="price" placeholder="Price (₹)">
+    <input type="text" id="img" placeholder="Image Path (img/pen.jpg)">
+    <button onclick="addItem()" style="width:100%; padding: 10px; background: #2c3e50; color: white; border: none;">Add to Public Shop</button>
+
+    <hr>
+    <h3>Current Inventory</h3>
+    <div id="inventory-list"></div>
+</div>
+
+<script>
+    let products = JSON.parse(localStorage.getItem('shop_db')) || [];
+
+    function renderAdmin() {
+        const list = document.getElementById('inventory-list');
+        list.innerHTML = products.map(p => `
+            <div class="item-row">
+                <span>${p.name} (₹${p.price})</span>
+                <button class="del-btn" onclick="removeItem(${p.id})">Delete</button>
+            </div>
+        `).join('');
+        localStorage.setItem('shop_db', JSON.stringify(products));
+    }
+
+    function addItem() {
+        const name = document.getElementById('name').value;
+        const price = document.getElementById('price').value;
+        const img = document.getElementById('img').value || "https://via.placeholder.com/70";
+
+        if(name && price) {
+            products.push({ id: Date.now(), name, price: parseInt(price), img });
+            renderAdmin();
+            document.getElementById('name').value = '';
+            document.getElementById('price').value = '';
+        }
+    }
+
+    function removeItem(id) {
+        products = products.filter(p => p.id !== id);
+        renderAdmin();
+    }
+
+    renderAdmin();
+</script>
+</body>
+</html>

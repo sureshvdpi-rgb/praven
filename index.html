@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stationery Shop</title>
+    <style>
+        body { font-family: sans-serif; margin: 0; background: #f4f7f6; padding-bottom: 100px; }
+        header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
+        .container { padding: 15px; }
+        .product-card { background: white; padding: 12px; margin-bottom: 10px; border-radius: 10px; display: flex; align-items: center; gap: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .product-img { width: 70px; height: 70px; object-fit: cover; border-radius: 5px; }
+        .info { flex-grow: 1; }
+        .add-btn { background: #2c3e50; color: white; border: none; padding: 8px 12px; border-radius: 5px; }
+        .footer { position: fixed; bottom: 0; width: 100%; background: white; padding: 15px; box-sizing: border-box; border-top: 2px solid #ddd; }
+        .wa-btn { background: #25D366; color: white; display: block; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<header><h2>Stationery Shop</h2></header>
+
+<div class="container" id="shop-list"></div>
+
+<div class="footer">
+    <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
+        <span>Items: <span id="cnt">0</span></span>
+        <b>Total: ₹<span id="tot">0</span></b>
+    </div>
+    <a href="#" class="wa-btn" onclick="sendOrder()">Order via WhatsApp</a>
+</div>
+
+<script>
+    // Load data from LocalStorage
+    let products = JSON.parse(localStorage.getItem('shop_db')) || [];
+    let cart = [];
+
+    function render() {
+        const list = document.getElementById('shop-list');
+        if(products.length === 0) {
+            list.innerHTML = "<p style='text-align:center;'>No items available yet.</p>";
+            return;
+        }
+        list.innerHTML = products.map(p => `
+            <div class="product-card">
+                <img src="${p.img}" class="product-img">
+                <div class="info">
+                    <b>${p.name}</b><br><span>₹${p.price}</span>
+                </div>
+                <button class="add-btn" onclick="addToCart(${p.id})">ADD</button>
+            </div>
+        `).join('');
+    }
+
+    function addToCart(id) {
+        const p = products.find(item => item.id === id);
+        cart.push(p);
+        document.getElementById('cnt').innerText = cart.length;
+        document.getElementById('tot').innerText = cart.reduce((s, i) => s + i.price, 0);
+    }
+
+    function sendOrder() {
+        if(cart.length === 0) return alert("Cart is empty");
+        let msg = "New Order:%0a";
+        cart.forEach((i, idx) => msg += `${idx+1}. ${i.name} - ₹${i.price}%0a`);
+        window.open(`https://wa.me/919000000000?text=${msg}`);
+    }
+
+    render();
+</script>
+</body>
+</html>
