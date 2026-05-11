@@ -3,19 +3,12 @@
   "products": [
     {
       "id": 1,
-      "category": ["Pen", "New"],
-      "name": "Premium Gel Pen (Pack of 10)",
-      "mrp": 100,
-      "price": 75,
-      "img": "https://example.com/image.jpg"
+      "category": ["Notebook", "New"],
+      "name": "Apsara Long Notebook - Unruled (160 Pages)",
+      "mrp": 60,
+      "price": 45,
+      "img": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/ciw/2026/2/24/e631676a-af02-4e06-9341-6d755ae40a81_CML8A50YWC_MN_23022026.png"
     },
-    {
-      "id": 2,
-      "category": ["Pen"],
-      "name": "Soft Grip Gel Pen - Blue",
-      "mrp": 15,
-      "price": 10,
-      "img": "https://example.com/image2.jpg"
-    }
+    
   ]
 }
