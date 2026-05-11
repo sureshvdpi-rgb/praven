@@ -1,37 +1,21 @@
 {
-  "categories": ["New", "Pen", "Notebook", "Geometry"],
+  "categories": ["New", "Pen", "Notebook"],
   "products": [
     {
       "id": 1,
-      "category": "Pen",
+      "category": ["Pen", "New"],
       "name": "Premium Gel Pen (Pack of 10)",
       "mrp": 100,
       "price": 75,
-      "img": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSx5g5rFN4d3dfh3MESEdp6P03UvI8wxp43PJZyHdIhUFb_wzkCprrdFDUbXanVOFIrFeD7DNEL3p_SE5QOXFV2z0tKvjn64m7xNSyCDg3aQ9eVVO-BYIvU"
+      "img": "https://example.com/image.jpg"
     },
     {
       "id": 2,
-      "category": "Pen",
+      "category": ["Pen"],
       "name": "Soft Grip Gel Pen - Blue",
       "mrp": 15,
       "price": 10,
-      "img": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQV-tYM_OMmmlyCjwbzK3v6migpS5cSoTZKn0g8-ftpJ9K9TBMaDeOWvo43R2ffzkpSJT4l2mIxxQs6snKR8qA-oSKvFBq12B2sN16z_GThPk02Rvc5VI2JmA"
-    },
-    {
-      "id": 3,
-      "category": "Notebook",
-      "name": "A4 Long Notebook (120 Pages)",
-      "mrp": 60,
-      "price": 45,
-      "img": "https://via.placeholder.com/150?text=A4+Notebook"
-    }
-    {
-      "id": 4,
-      "category": ["Box","New"],
-      "name": "Magnetic Box",
-      "mrp": 120,
-      "price": 100,
-      "img": "https://via.placeholder.com/150?text=A4+Notebook"
+      "img": "https://example.com/image2.jpg"
     }
   ]
 }

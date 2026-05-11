@@ -153,7 +153,6 @@
 </div>
 
 <script>
-    // GitHub Raw URL for your products.json
     const jsonURL = "https://raw.githubusercontent.com/sureshvdpi-rgb/praven/refs/heads/main/products.json";
 
     let products = [];
@@ -165,18 +164,24 @@
             const response = await fetch(jsonURL);
             const data = await response.json();
             
-            // Extracts data from the new JSON structure
-            products = data.products || [];
-            categories = data.categories || [];
+            // Check if JSON is new format or old format
+            if (Array.isArray(data)) {
+                // OLD FORMAT: Auto-convert for safety
+                products = data;
+                categories = [...new Set(data.flatMap(p => p.category))]; 
+            } else {
+                // NEW FORMAT
+                products = data.products || [];
+                categories = data.categories || [];
+            }
             
             renderDropdown();
             handleFilter();
         } catch (e) {
-            document.getElementById('shop-list').innerHTML = "<p style='text-align:center; color:red;'>Failed to load products.</p>";
+            document.getElementById('shop-list').innerHTML = `<p style='text-align:center; color:red;'>Error: ${e.message}</p>`;
         }
     }
 
-    // Builds the dropdown options from the categories array in JSON
     function renderDropdown() {
         const dropdown = document.getElementById('category-dropdown');
         let options = '<option value="All">All Categories</option>';
@@ -194,11 +199,9 @@
         clearBtn.style.display = searchTerm.length > 0 ? 'flex' : 'none';
 
         const filtered = products.filter(p => {
-            // Multi-category logic: checks if selected option is in the product's category array
             const matchesCategory = (selectedCat === 'All' || 
                                      (Array.isArray(p.category) ? p.category.includes(selectedCat) : p.category === selectedCat));
             
-            // Search logic: checks name and all assigned categories
             const catString = Array.isArray(p.category) ? p.category.join(' ').toLowerCase() : (p.category ? p.category.toLowerCase() : "");
             const matchesSearch = p.name.toLowerCase().includes(searchTerm) || catString.includes(searchTerm);
             
@@ -216,7 +219,7 @@
     function renderShop(data) {
         const list = document.getElementById('shop-list');
         if (data.length === 0) {
-            list.innerHTML = `<p style="text-align:center; padding:50px; color:#888;">No matching items found.</p>`;
+            list.innerHTML = `<p style="text-align:center; padding:50px; color:#888;">No items found.</p>`;
             return;
         }
 
