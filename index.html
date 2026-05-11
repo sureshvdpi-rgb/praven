@@ -15,7 +15,6 @@
 
         body { font-family: 'Segoe UI', Roboto, sans-serif; margin: 0; background: #f8f9fa; padding-bottom: 100px; color: #333; }
         
-        /* Stylish Kids Header */
         header { 
             background: var(--header-gradient); 
             color: white; padding: 30px 15px; text-align: center; 
@@ -24,18 +23,61 @@
         .brand-name { font-family: 'Comic Sans MS', 'cursive'; font-size: 2.2rem; font-weight: 900; text-transform: uppercase; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); display: block; }
         .tagline { font-size: 0.9rem; background: rgba(255, 255, 255, 0.2); padding: 4px 12px; border-radius: 20px; margin-top: 8px; display: inline-block; backdrop-filter: blur(5px); }
 
-        /* Filter Navigation */
-        .filter-wrapper { overflow-x: auto; white-space: nowrap; padding: 15px; background: #f8f9fa; scrollbar-width: none; }
-        .filter-wrapper::-webkit-scrollbar { display: none; }
-        .filter-btn { display: inline-block; padding: 8px 20px; margin-right: 10px; background: white; border: 1px solid #ddd; border-radius: 25px; font-size: 0.9rem; font-weight: 600; cursor: pointer; transition: 0.2s; }
-        .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+        /* Search and Dropdown Section */
+        .controls-wrapper {
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .search-box {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        #product-search {
+            width: 100%;
+            padding: 12px 40px 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        .clear-search {
+            position: absolute;
+            right: 15px;
+            background: #ddd;
+            color: #666;
+            border: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            font-size: 0.7rem;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+        #category-dropdown {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            background: white;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary);
+            outline: none;
+            cursor: pointer;
+        }
 
         .container { padding: 0 15px 15px 15px; max-width: 600px; margin: auto; }
         
-        /* Savings Banner */
         .main-savings-banner { background: #fff; margin: 0 15px 15px 15px; padding: 12px; border-radius: 12px; text-align: center; border: 1px dashed var(--accent); display: none; }
 
-        /* Product Cards */
         .product-card { background: white; padding: 12px; margin-bottom: 12px; border-radius: 16px; display: flex; align-items: center; gap: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border: 1px solid #eee; }
         .product-img { width: 75px; height: 75px; object-fit: contain; border-radius: 10px; border: 1px solid #f0f0f0; }
         .info { flex-grow: 1; }
@@ -47,11 +89,9 @@
 
         .add-btn { background: var(--primary); color: white; border: none; padding: 8px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
 
-        /* Floating Cart Icon */
         .cart-fab { position: fixed; bottom: 25px; right: 25px; background: var(--primary); color: white; width: 65px; height: 65px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3); z-index: 999; cursor: pointer; }
         .cart-badge { position: absolute; top: 0; right: 0; background: var(--accent); color: white; font-size: 0.8rem; padding: 4px 8px; border-radius: 50%; font-weight: bold; }
 
-        /* Cart Overlay */
         .cart-overlay { position: fixed; top: 0; right: -100%; width: 100%; height: 100%; background: #f8f9fa; z-index: 1001; transition: 0.3s; display: flex; flex-direction: column; }
         .cart-overlay.active { right: 0; }
         .cart-header { padding: 20px; background: var(--primary); color: white; display: flex; justify-content: space-between; align-items: center; }
@@ -74,11 +114,18 @@
     <span class="tagline">✨ Fun Tools for Smart Kids ✨</span>
 </header>
 
-<div class="filter-wrapper">
-    <div class="filter-btn active" onclick="filterProducts('All', this)">All Items</div>
-    <div class="filter-btn" onclick="filterProducts('New', this)">New Arrivals</div>
-    <div class="filter-btn" onclick="filterProducts('Pen', this)">Pens</div>
-    <div class="filter-btn" onclick="filterProducts('Notebook', this)">Notebooks</div>
+<div class="controls-wrapper">
+    <div class="search-box">
+        <input type="text" id="product-search" placeholder="Search for items (e.g. gel pen)..." oninput="handleFilter()">
+        <button class="clear-search" id="clear-btn" onclick="clearSearch()">✕</button>
+    </div>
+    
+    <select id="category-dropdown" onchange="handleFilter()">
+        <option value="All">All Categories</option>
+        <option value="New">New Arrivals</option>
+        <option value="Pen">Pens & Refills</option>
+        <option value="Notebook">Notebooks & Paper</option>
+    </select>
 </div>
 
 <div class="main-savings-banner" id="main-save-banner">
@@ -111,7 +158,7 @@
 </div>
 
 <script>
-    // 1. UPDATE THIS LINK with your GitHub Raw URL
+    // GitHub Raw URL for your products.json
     const jsonURL = "https://raw.githubusercontent.com/sureshvdpi-rgb/praven/refs/heads/main/products.json";
 
     let products = [];
@@ -121,16 +168,43 @@
         try {
             const response = await fetch(jsonURL);
             products = await response.json();
-            renderShop();
+            handleFilter();
         } catch (e) {
             document.getElementById('shop-list').innerHTML = "<p style='text-align:center; color:red;'>Failed to load products.</p>";
         }
     }
 
-    function renderShop(filter = 'All') {
+    function handleFilter() {
+        const searchTerm = document.getElementById('product-search').value.toLowerCase();
+        const selectedCat = document.getElementById('category-dropdown').value;
+        const clearBtn = document.getElementById('clear-btn');
+        
+        // Show/Hide clear button
+        clearBtn.style.display = searchTerm.length > 0 ? 'flex' : 'none';
+
+        const filtered = products.filter(p => {
+            const matchesCategory = (selectedCat === 'All' || p.category === selectedCat);
+            const matchesSearch = p.name.toLowerCase().includes(searchTerm) || 
+                                 p.category.toLowerCase().includes(searchTerm);
+            return matchesCategory && matchesSearch;
+        });
+
+        renderShop(filtered);
+    }
+
+    function clearSearch() {
+        document.getElementById('product-search').value = '';
+        handleFilter();
+    }
+
+    function renderShop(data) {
         const list = document.getElementById('shop-list');
-        const filtered = filter === 'All' ? products : products.filter(p => p.category === filter);
-        list.innerHTML = filtered.map(p => {
+        if (data.length === 0) {
+            list.innerHTML = `<p style="text-align:center; padding:50px; color:#888;">No matching items found.</p>`;
+            return;
+        }
+
+        list.innerHTML = data.map(p => {
             const save = p.mrp - p.price;
             return `
                 <div class="product-card">
@@ -148,12 +222,6 @@
         }).join('');
     }
 
-    function filterProducts(cat, btn) {
-        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        renderShop(cat);
-    }
-
     function toggleCart() { document.getElementById('cart-page').classList.toggle('active'); renderCart(); }
 
     function updateQty(id, change) {
@@ -167,9 +235,11 @@
         let totalItems = 0, totalSavings = 0, totalPayable = 0, totalMRP = 0;
         for (let id in cart) {
             const p = products.find(prod => prod.id == id);
-            totalItems += cart[id];
-            totalMRP += (p.mrp * cart[id]);
-            totalPayable += (p.price * cart[id]);
+            if(p) {
+                totalItems += cart[id];
+                totalMRP += (p.mrp * cart[id]);
+                totalPayable += (p.price * cart[id]);
+            }
         }
         totalSavings = totalMRP - totalPayable;
         document.getElementById('cart-count').innerText = totalItems;
