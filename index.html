@@ -3,70 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stationery Shop</title>
+    <title>My Stationery Shop</title>
     <style>
-        body { font-family: sans-serif; margin: 0; background: #f4f7f6; padding-bottom: 100px; }
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f4f7f6; padding-bottom: 110px; }
         header { background: #2c3e50; color: white; padding: 20px; text-align: center; }
         .container { padding: 15px; }
-        .product-card { background: white; padding: 12px; margin-bottom: 10px; border-radius: 10px; display: flex; align-items: center; gap: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        .product-img { width: 70px; height: 70px; object-fit: cover; border-radius: 5px; }
+        .product-card { background: white; padding: 12px; margin-bottom: 12px; border-radius: 12px; display: flex; align-items: center; gap: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+        .product-img { width: 80px; height: 80px; object-fit: cover; border-radius: 8px; background: #eee; }
         .info { flex-grow: 1; }
-        .add-btn { background: #2c3e50; color: white; border: none; padding: 8px 12px; border-radius: 5px; }
-        .footer { position: fixed; bottom: 0; width: 100%; background: white; padding: 15px; box-sizing: border-box; border-top: 2px solid #ddd; }
-        .wa-btn { background: #25D366; color: white; display: block; text-align: center; padding: 12px; border-radius: 8px; text-decoration: none; font-weight: bold; }
+        .p-name { font-weight: bold; font-size: 1.1rem; display: block; }
+        .p-price { color: #2c3e50; font-weight: bold; }
+        .add-btn { background: #2c3e50; color: white; border: none; padding: 10px 15px; border-radius: 8px; font-weight: bold; cursor: pointer; }
+        .footer { position: fixed; bottom: 0; width: 100%; background: white; padding: 15px; box-sizing: border-box; border-top: 1px solid #ddd; z-index: 1000; }
+        .wa-btn { background: #25D366; color: white; display: block; text-align: center; padding: 15px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.1rem; }
     </style>
 </head>
 <body>
 
-<header><h2>Stationery Shop</h2></header>
+<header>
+    <h2 style="margin:0">Stationery Shop</h2>
+    <small>Direct WhatsApp Orders</small>
+</header>
 
 <div class="container" id="shop-list"></div>
 
 <div class="footer">
     <div style="display:flex; justify-content:space-between; margin-bottom:10px;">
-        <span>Items: <span id="cnt">0</span></span>
-        <b>Total: ₹<span id="tot">0</span></b>
+        <span>Items: <b id="cnt">0</b></span>
+        <span>Total: <b>₹<span id="tot">0</span></b></span>
     </div>
     <a href="#" class="wa-btn" onclick="sendOrder()">Order via WhatsApp</a>
 </div>
 
 <script>
-    // Load data from LocalStorage
-    let products = JSON.parse('[{\\"id\\":1778478854795,\\"name\\":\\"A4 Paper - B2B\\",\\"price\\":230,\\"img\\":\\"https://via.placeholder.com/70\\"}]')) || [];
+    // --- MANAGE YOUR PRODUCTS HERE ---
+    // Simply add or remove lines below. 
+    // Just follow the format: { name: "NAME", price: PRICE, img: "IMAGE_LINK" }
+    
+    const products = [
+        
+    { name: "Gel Pen - Full Pack", price: 75, img: "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSx5g5rFN4d3dfh3MESEdp6P03UvI8wxp43PJZyHdIhUFb_wzkCprrdFDUbXanVOFIrFeD7DNEL3p_SE5QOXFV2z0tKvjn64m7xNSyCDg3aQ9eVVO-BYIvU" },
+    { name: "Gel Pen", price: 10, img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQV-tYM_OMmmlyCjwbzK3v6migpS5cSoTZKn0g8-ftpJ9K9TBMaDeOWvo43R2ffzkpSJT4l2mIxxQs6snKR8qA-oSKvFBq12B2sN16z_GThPk02Rvc5VI2JmA" },        
+
+    ];
+
+    // ---------------------------------
+
     let cart = [];
 
     function render() {
         const list = document.getElementById('shop-list');
-        if(products.length === 0) {
-            list.innerHTML = "<p style='text-align:center;'>No items available yet.</p>";
-            return;
-        }
-        list.innerHTML = products.map(p => `
+        list.innerHTML = products.map((p, index) => `
             <div class="product-card">
-                <img src="${p.img}" class="product-img">
+                <img src="${p.img}" class="product-img" onerror="this.src='https://via.placeholder.com/80?text=No+Img'">
                 <div class="info">
-                    <b>${p.name}</b><br><span>₹${p.price}</span>
+                    <span class="p-name">${p.name}</span>
+                    <span class="p-price">₹${p.price}</span>
                 </div>
-                <button class="add-btn" onclick="addToCart(${p.id})">ADD</button>
+                <button class="add-btn" onclick="addToCart(${index})">ADD +</button>
             </div>
         `).join('');
     }
 
-    function addToCart(id) {
-        const p = products.find(item => item.id === id);
+    function addToCart(index) {
+        const p = products[index];
         cart.push(p);
+        updateUI();
+    }
+
+    function updateUI() {
         document.getElementById('cnt').innerText = cart.length;
-        document.getElementById('tot').innerText = cart.reduce((s, i) => s + i.price, 0);
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        document.getElementById('tot').innerText = total;
     }
 
     function sendOrder() {
-        if(cart.length === 0) return alert("Cart is empty");
-        let msg = "New Order:%0a";
-        cart.forEach((i, idx) => msg += `${idx+1}. ${i.name} - ₹${i.price}%0a`);
-        window.open(`https://wa.me/919000000000?text=${msg}`);
+        if(cart.length === 0) return alert("Your cart is empty!");
+        
+        let message = "Hi, I would like to order:%0a";
+        cart.forEach((item, i) => {
+            message += `${i + 1}. ${item.name} - ₹${item.price}%0a`;
+        });
+        
+        const total = cart.reduce((sum, item) => sum + item.price, 0);
+        message += `%0a*Total Amount: ₹${total}*%0a%0aPlease confirm delivery!`;
+        
+        // REPLACE WITH YOUR NUMBER
+        const phone = "919000000000"; 
+        window.open(`https://wa.me/${phone}?text=${message}`, '_blank');
     }
 
     render();
 </script>
+
 </body>
 </html>
