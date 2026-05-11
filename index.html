@@ -51,10 +51,10 @@
             background: #ddd;
             color: #666;
             border: none;
-            width: 20px;
-            height: 20px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
-            font-size: 0.7rem;
+            font-size: 0.75rem;
             cursor: pointer;
             display: none;
             align-items: center;
@@ -153,7 +153,7 @@
 </div>
 
 <script>
-    // Replace this with your raw GitHub JSON URL
+    // GitHub Raw URL for your products.json
     const jsonURL = "https://raw.githubusercontent.com/sureshvdpi-rgb/praven/refs/heads/main/products.json";
 
     let products = [];
@@ -165,8 +165,8 @@
             const response = await fetch(jsonURL);
             const data = await response.json();
             
-            // Extract from new JSON structure
-            products = data.products;
+            // Extracts data from the new JSON structure
+            products = data.products || [];
             categories = data.categories || [];
             
             renderDropdown();
@@ -176,6 +176,7 @@
         }
     }
 
+    // Builds the dropdown options from the categories array in JSON
     function renderDropdown() {
         const dropdown = document.getElementById('category-dropdown');
         let options = '<option value="All">All Categories</option>';
@@ -193,9 +194,14 @@
         clearBtn.style.display = searchTerm.length > 0 ? 'flex' : 'none';
 
         const filtered = products.filter(p => {
-            const matchesCategory = (selectedCat === 'All' || p.category === selectedCat);
-            const matchesSearch = p.name.toLowerCase().includes(searchTerm) || 
-                                 p.category.toLowerCase().includes(searchTerm);
+            // Multi-category logic: checks if selected option is in the product's category array
+            const matchesCategory = (selectedCat === 'All' || 
+                                     (Array.isArray(p.category) ? p.category.includes(selectedCat) : p.category === selectedCat));
+            
+            // Search logic: checks name and all assigned categories
+            const catString = Array.isArray(p.category) ? p.category.join(' ').toLowerCase() : (p.category ? p.category.toLowerCase() : "");
+            const matchesSearch = p.name.toLowerCase().includes(searchTerm) || catString.includes(searchTerm);
+            
             return matchesCategory && matchesSearch;
         });
 
