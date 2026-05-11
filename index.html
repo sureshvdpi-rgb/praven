@@ -23,7 +23,6 @@
         .brand-name { font-family: 'Comic Sans MS', 'cursive'; font-size: 2.2rem; font-weight: 900; text-transform: uppercase; margin: 0; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); display: block; }
         .tagline { font-size: 0.9rem; background: rgba(255, 255, 255, 0.2); padding: 4px 12px; border-radius: 20px; margin-top: 8px; display: inline-block; backdrop-filter: blur(5px); }
 
-        /* Search and Dropdown Section */
         .controls-wrapper {
             padding: 15px;
             display: flex;
@@ -116,16 +115,12 @@
 
 <div class="controls-wrapper">
     <div class="search-box">
-        <input type="text" id="product-search" placeholder="Search for items (e.g. gel pen)..." oninput="handleFilter()">
+        <input type="text" id="product-search" placeholder="Search for items..." oninput="handleFilter()">
         <button class="clear-search" id="clear-btn" onclick="clearSearch()">✕</button>
     </div>
     
     <select id="category-dropdown" onchange="handleFilter()">
-        <option value="All">All Categories</option>
-        <option value="New">New Arrivals</option>
-        <option value="Pen">Pens & Refills</option>
-        <option value="Notebook">Notebooks & Paper</option>
-    </select>
+        </select>
 </div>
 
 <div class="main-savings-banner" id="main-save-banner">
@@ -158,20 +153,36 @@
 </div>
 
 <script>
-    // GitHub Raw URL for your products.json
+    // Replace this with your raw GitHub JSON URL
     const jsonURL = "https://raw.githubusercontent.com/sureshvdpi-rgb/praven/refs/heads/main/products.json";
 
     let products = [];
+    let categories = [];
     let cart = {};
 
-    async function loadProducts() {
+    async function loadData() {
         try {
             const response = await fetch(jsonURL);
-            products = await response.json();
+            const data = await response.json();
+            
+            // Extract from new JSON structure
+            products = data.products;
+            categories = data.categories || [];
+            
+            renderDropdown();
             handleFilter();
         } catch (e) {
             document.getElementById('shop-list').innerHTML = "<p style='text-align:center; color:red;'>Failed to load products.</p>";
         }
+    }
+
+    function renderDropdown() {
+        const dropdown = document.getElementById('category-dropdown');
+        let options = '<option value="All">All Categories</option>';
+        categories.forEach(cat => {
+            options += `<option value="${cat}">${cat}</option>`;
+        });
+        dropdown.innerHTML = options;
     }
 
     function handleFilter() {
@@ -179,7 +190,6 @@
         const selectedCat = document.getElementById('category-dropdown').value;
         const clearBtn = document.getElementById('clear-btn');
         
-        // Show/Hide clear button
         clearBtn.style.display = searchTerm.length > 0 ? 'flex' : 'none';
 
         const filtered = products.filter(p => {
@@ -288,7 +298,7 @@
         window.open(`https://wa.me/918438553395?text=${msg}`);
     }
 
-    loadProducts();
+    loadData();
 </script>
 </body>
 </html>
