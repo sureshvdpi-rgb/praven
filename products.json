@@ -1,9 +1,9 @@
 {
-  "categories": ["New", "Pen", "Notebook"],
+  "categories": ["New", "Pen", "Notebook", "Sharpner"],
   "products": [
     {
       "id": 1,
-      "category": ["Notebook", "New"],
+      "category": "Notebook",
       "name": "Apsara Long Notebook - Unruled (160 Pages)",
       "mrp": 60,
       "price": 45,
@@ -11,11 +11,19 @@
     },
   {
       "id": 2,
-      "category": ["Notebook", "New"],
+      "category": "Notebook",
       "name": "Apsara Long Notebook - Ruled (160 Pages)",
       "mrp": 60,
       "price": 45,
       "img": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/ciw/2026/2/24/e631676a-af02-4e06-9341-6d755ae40a81_CML8A50YWC_MN_23022026.png"
+    },
+    {
+      "id": 3,
+      "category": ["sharpner", "New"],
+      "name": "tidytop sharpner (pack of 2)",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLfCZyV8jKvgFCfrzvFZV0LZ14nNmceL1Q8w&s"
     }
   ]
 }
