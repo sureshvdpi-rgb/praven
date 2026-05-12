@@ -20,10 +20,18 @@
     {
       "id": 3,
       "category": ["Sharpner", "New"],
-      "name": "tidytop sharpner (pack of 2)",
+      "name": "Tidytop sharpner (pack of 2)",
       "mrp": 10,
       "price": 9,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLfCZyV8jKvgFCfrzvFZV0LZ14nNmceL1Q8w&s"
+    },
+    {
+      "id": 4,
+      "category": ["Sharpner"],
+      "name": "Hausser Sharpner (pack of 2)",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZkDJzUk2c9sdwhyham_3z8i0RTzHJsU0ncw&s"
     }
   ]
 }
