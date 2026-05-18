@@ -1,5 +1,6 @@
 {
   "categories": [
+    "Eraser",
     "New",
     "Notebook",
     "Pen",
@@ -25,24 +26,11 @@
     },
     {
       "id": 3,
-      "category": [
-        "Sharpner",
-        "New"
-      ],
+      "category": "Sharpner",
       "name": "Tidytop  Wooden Pencil sharpner (pack of 2)",
       "mrp": 10,
       "price": 9,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLfCZyV8jKvgFCfrzvFZV0LZ14nNmceL1Q8w&s"
-    },
-    {
-      "id": 4,
-      "category": [
-        "Sharpner"
-      ],
-      "name": "Hausser Beetle Wooden Pencil Sharpner (pack of 2)",
-      "mrp": 10,
-      "price": 9,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZkDJzUk2c9sdwhyham_3z8i0RTzHJsU0ncw&s"
     },
     {
       "id": 5,
@@ -62,6 +50,22 @@
       "mrp": 60,
       "price": 47,
       "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQb-ZXMX_YKVk5AQgUyVNQV6Bejqwn3d50bx4v9ADRbL-0GKLO8XZKg98gREJiopwCvyFUKZzBnt2s8asR-q3Mv1mdWwovya1ftc9j8fhV-TlqZ8wWxw3J9&usqp=CAc"
+    },
+    {
+      "id": 4,
+      "category": "New",
+      "name": "test",
+      "mrp": 100,
+      "price": 90,
+      "img": ""
+    },
+    {
+      "id": 7,
+      "category": "Eraser",
+      "name": "Apsara Eraser (pack of 2)",
+      "mrp": 10,
+      "price": 9,
+      "img": ""
     }
   ]
 }
