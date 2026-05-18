@@ -1,5 +1,11 @@
 {
-  "categories": ["New", "Pen", "Notebook", "Sharpner"],
+  "categories": [
+    "New",
+    "Notebook",
+    "Pen",
+    "Pencil",
+    "Sharpner"
+  ],
   "products": [
     {
       "id": 1,
@@ -9,7 +15,7 @@
       "price": 45,
       "img": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/ciw/2026/2/24/e631676a-af02-4e06-9341-6d755ae40a81_CML8A50YWC_MN_23022026.png"
     },
-  {
+    {
       "id": 2,
       "category": "Notebook",
       "name": "Apsara Long Notebook - Ruled (160 Pages)",
@@ -19,7 +25,10 @@
     },
     {
       "id": 3,
-      "category": ["Sharpner", "New"],
+      "category": [
+        "Sharpner",
+        "New"
+      ],
       "name": "Tidytop  Wooden Pencil sharpner (pack of 2)",
       "mrp": 10,
       "price": 9,
@@ -27,11 +36,32 @@
     },
     {
       "id": 4,
-      "category": ["Sharpner"],
+      "category": [
+        "Sharpner"
+      ],
       "name": "Hausser Beetle Wooden Pencil Sharpner (pack of 2)",
       "mrp": 10,
       "price": 9,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZkDJzUk2c9sdwhyham_3z8i0RTzHJsU0ncw&s"
+    },
+    {
+      "id": 5,
+      "category": [
+        "New",
+        "Notebook"
+      ],
+      "name": "King size Note book",
+      "mrp": 40,
+      "price": 30,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9G3hZ0ME2d4BgMXiHvjSql0c0RfXAW3ckQ&s"
+    },
+    {
+      "id": 6,
+      "category": "Pencil",
+      "name": "Platinum Apsara Pencil",
+      "mrp": 60,
+      "price": 47,
+      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQb-ZXMX_YKVk5AQgUyVNQV6Bejqwn3d50bx4v9ADRbL-0GKLO8XZKg98gREJiopwCvyFUKZzBnt2s8asR-q3Mv1mdWwovya1ftc9j8fhV-TlqZ8wWxw3J9&usqp=CAc"
     }
   ]
 }
