@@ -1,9 +1,9 @@
 {
   "categories": [
+    "Ballpoint Pen",
     "Eraser",
     "New",
     "Notebook",
-    "Ballpoint Pen",
     "Pencil",
     "Sharpner"
   ],
@@ -34,10 +34,7 @@
     },
     {
       "id": 5,
-      "category": [
-        "New",
-        "Notebook"
-      ],
+      "category": "Notebook",
       "name": "King size Note book",
       "mrp": 40,
       "price": 30,
@@ -52,20 +49,60 @@
       "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQb-ZXMX_YKVk5AQgUyVNQV6Bejqwn3d50bx4v9ADRbL-0GKLO8XZKg98gREJiopwCvyFUKZzBnt2s8asR-q3Mv1mdWwovya1ftc9j8fhV-TlqZ8wWxw3J9&usqp=CAc"
     },
     {
-      "id": 4,
-      "category": "New",
-      "name": "test",
-      "mrp": 100,
-      "price": 90,
-      "img": ""
-    },
-    {
       "id": 7,
       "category": "Eraser",
       "name": "Apsara Eraser (pack of 2)",
       "mrp": 10,
       "price": 9,
-      "img": ""
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0ylUBxal7sDyDMNEuE6qqP24GHL6pbOUnCg&s"
+    },
+    {
+      "id": 8,
+      "category": "Pencil",
+      "name": "Apsara Pencil - Pop Star",
+      "mrp": 60,
+      "price": 46,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiyVpAM8GLQmF3JxMVhIZynWpS2X46OuL_yg&s"
+    },
+    {
+      "id": 9,
+      "category": "Pencil",
+      "name": "Camlin Pencil - Supreme",
+      "mrp": 60,
+      "price": 42,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJciUsv8YeMrCXhMHXC6YYgdtny6R-_GCugQ&s"
+    },
+    {
+      "id": 10,
+      "category": "Pencil",
+      "name": "Doms Pencil - Y1",
+      "mrp": 50,
+      "price": 40,
+      "img": "https://m.media-amazon.com/images/I/71I0ppFbMRL._SX569_.jpg"
+    },
+    {
+      "id": 11,
+      "category": "Pencil",
+      "name": "Apsara Pencil - Matt Magic",
+      "mrp": 70,
+      "price": 55,
+      "img": "https://m.media-amazon.com/images/I/41l+bXguDeL._SY300_SX300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": 12,
+      "category": "Pencil",
+      "name": "Nataraj Pencil - 621",
+      "mrp": 50,
+      "price": 40,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7PCfCuFBPxqbtEyK4oLOhioHLn3OCTtTDpw&s"
+    },
+    {
+      "id": 13,
+      "category": "Pencil",
+      "name": "Hauser Pencil - Master",
+      "mrp": 60,
+      "price": 46,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAiUA5T71HUb9twLSfFQhHGccU3aPzUw6nPw&s"
     }
   ]
 }
