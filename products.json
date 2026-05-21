@@ -1,6 +1,9 @@
 {
   "categories": [
     "0.7 Tip Pencil",
+    "2mm Tip Pencil",
+    "Activity",
+    "Art",
     "Ballpoint Pen",
     "Battery",
     "Book Cover",
@@ -9,7 +12,6 @@
     "Geometry",
     "Glue",
     "Kit",
-    "New",
     "Notebook",
     "Paper",
     "Pencil",
@@ -17,7 +19,8 @@
     "Permanent Marker",
     "Scale",
     "Sharpner",
-    "Slate"
+    "Slate",
+    "Toy"
   ],
   "products": [
     {
@@ -276,7 +279,7 @@
     {
       "id": 32,
       "category": "Battery",
-      "name": "AA Battery - Nippo - Ignite",
+      "name": "AA Battery - Nippo - Ignite - single Piece",
       "mrp": 20,
       "price": 11,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyqxXbwgs5V6r27fqlzwb5G6Me2CTb32YpQ&s"
@@ -284,7 +287,7 @@
     {
       "id": 33,
       "category": "Battery",
-      "name": "AAA Battery - Nippo - Ignite",
+      "name": "AAA Battery - Nippo - Ignite - single piece",
       "mrp": 18,
       "price": 11,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCZ-po3r3V1aahDBcHTLmu1hb7kN-3DxDUw&s"
@@ -323,6 +326,215 @@
       "mrp": 335,
       "price": 230,
       "img": "https://newemart.com/wp-content/uploads/2023/01/tnpl.jpg"
+    },
+    {
+      "id": 38,
+      "category": "0.7 Tip Pencil",
+      "name": "0.7 tip - 100 Piece Pack",
+      "mrp": 40,
+      "price": 25,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS-l_Qg7vBiU-dL81drihazj0nzbEqag0raw&s"
+    },
+    {
+      "id": 39,
+      "category": "0.7 Tip Pencil",
+      "name": "0.7 tip - 20 Piece Pack",
+      "mrp": 15,
+      "price": 10,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
+    },
+    {
+      "id": 40,
+      "category": "0.7 Tip Pencil",
+      "name": "0.7 Tip - Short - Camlin (pack of 2)",
+      "mrp": 10,
+      "price": 8,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw_K0ir-YCbXcW-CUV3jh2e_FA7wyiSbG4tg&s"
+    },
+    {
+      "id": 41,
+      "category": "0.7 Tip Pencil",
+      "name": "0.7 Tip - Short - Good Morning (pack of 2)",
+      "mrp": 10,
+      "price": 7,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
+    },
+    {
+      "id": 42,
+      "category": "2mm Tip Pencil",
+      "name": "2mm Tip - Long - Rabbit (6 tips)",
+      "mrp": 10,
+      "price": 8,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
+    },
+    {
+      "id": 43,
+      "category": "2mm Tip Pencil",
+      "name": "2mm Tip - Hauser - 3 piece pack (Pack of 2)",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgQi6PC8AXGl5qDmlJvRogItoLobTiS1X1_g&s"
+    },
+    {
+      "id": 44,
+      "category": "Glue",
+      "name": "743 instant Bonding Glue",
+      "mrp": 75,
+      "price": 35,
+      "img": "https://m.media-amazon.com/images/I/414T8c2-1hL._SY445_SX342_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": 45,
+      "category": "Toy",
+      "name": "Stumper Ball",
+      "mrp": 49,
+      "price": 34,
+      "img": "https://probadminton.in/cdn/shop/files/unnamed_3131f5b5-8dca-445d-8726-9bd24aa805eb.jpg?v=1772548688&width=750"
+    },
+    {
+      "id": 46,
+      "category": "Activity",
+      "name": "AAA Battery holder (2 cell)",
+      "mrp": 12,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgOHtoxPhL7qhvjcSigbvw7DN1LQqMPeezIw&s"
+    },
+    {
+      "id": 47,
+      "category": [
+        "Book Cover",
+        "Notebook"
+      ],
+      "name": "Book Label (Random Design)",
+      "mrp": 6,
+      "price": 4,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPnMVzCw6nSckqJnmRkdZPXEuifUsg_hKdIQ&s"
+    },
+    {
+      "id": 48,
+      "category": "Toy",
+      "name": "Crazy Bouncing Ball",
+      "mrp": 15,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8STBmPIg0kfFiLhzvQxWF0f5-mixU_TBc0A&s"
+    },
+    {
+      "id": 49,
+      "category": "Activity",
+      "name": "Modelling Clay - Doms (single colour)",
+      "mrp": 30,
+      "price": 20,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4B_vCk4JKMmEVLMQVHwj1_q3TqS6tKdE3Pg&s"
+    },
+    {
+      "id": 50,
+      "category": [
+        "Book Cover",
+        "Notebook"
+      ],
+      "name": "Brown Sheet (Single Piece)",
+      "mrp": 6,
+      "price": 4,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
+    },
+    {
+      "id": 51,
+      "category": [
+        "Book Cover",
+        "Notebook"
+      ],
+      "name": "Book Cover (Roll) - 16\"",
+      "mrp": 30,
+      "price": 22,
+      "img": "https://m.media-amazon.com/images/I/612UuS7KTeL._SY879_.jpg"
+    },
+    {
+      "id": 52,
+      "category": "Art",
+      "name": "Drawing flat Brush 6 piece Set",
+      "mrp": 40,
+      "price": 25,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcFcME5IXJrFCKrpJuc2SkObvzpwI1sgzMkg&s"
+    },
+    {
+      "id": 53,
+      "category": "Art",
+      "name": "Professional Drawing round Brush 4 piece Set",
+      "mrp": 100,
+      "price": 75,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBYHzQJAN2E5umR7TNZABHSrMcRMqEcRXvPw&s"
+    },
+    {
+      "id": 54,
+      "category": "Art",
+      "name": "Professional Drawing flat Brush 4 piece Set",
+      "mrp": 160,
+      "price": 122,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgrF9Oy8an4n9Fl0Z9MZ9hsF90tK7ah5DxyA&s"
+    },
+    {
+      "id": 55,
+      "category": "Cartridge Pen",
+      "name": "Cartridge Pen - Hauser Grip-it",
+      "mrp": 70,
+      "price": 60,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3ZZ9A7ZVnPqZFGPAL2FSwodlYjXJJTfa2g&s"
+    },
+    {
+      "id": 56,
+      "category": "Cartridge Pen",
+      "name": "Cartridge - Blue - Flair (3 piece pack)",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg6aZseVl7vrVulwFneJ5ReJEsJsy2lWl-qA&s"
+    },
+    {
+      "id": 57,
+      "category": "Cartridge Pen",
+      "name": "Cartridge - Black - Flair (3 piece pack)",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfoAJLggCbQ_se8m4aNyiCnEon6cFxVoW72Q&s"
+    },
+    {
+      "id": 58,
+      "category": "Cartridge Pen",
+      "name": "Long Cartridge (3 piece pack)",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToH0GvInzw-RSg8X4Ho_Js3LdHwh17UyW_DQ&s"
+    },
+    {
+      "id": 59,
+      "category": "Cartridge Pen",
+      "name": "Small cartridge - Blue (10 piece pack)",
+      "mrp": 30,
+      "price": 15,
+      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTBaSJTUBeo2RvqJmrrSt3OIxybxlOYZIh1tPL59rRtzgxDGfJ6pJnM826BSeQwyRRE2i_8ZzC25JKLC2aq_RHLtioHUzYDpft9khGtOoi2aFXilDbWhrviQQ"
+    },
+    {
+      "id": 60,
+      "category": "Cartridge Pen",
+      "name": "Small cartridge - Black (10 piece pack)",
+      "mrp": 30,
+      "price": 15,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
+    },
+    {
+      "id": 61,
+      "category": "Cartridge Pen",
+      "name": "Standard cartridge - Black (10 piece pack)",
+      "mrp": 40,
+      "price": 20,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQi87D_l3OW2sb0mX9pdjRXWljMpEnhfgrw&s"
+    },
+    {
+      "id": 62,
+      "category": "Cartridge Pen",
+      "name": "Standard cartridge - Blue (10 piece pack)",
+      "mrp": 40,
+      "price": 20,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
     }
   ]
 }
