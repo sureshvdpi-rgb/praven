@@ -1,11 +1,23 @@
 {
   "categories": [
+    "0.7 Tip Pencil",
     "Ballpoint Pen",
+    "Battery",
+    "Book Cover",
+    "Cartridge Pen",
     "Eraser",
+    "Geometry",
+    "Glue",
+    "Kit",
     "New",
     "Notebook",
+    "Paper",
     "Pencil",
-    "Sharpner"
+    "Pencil Box",
+    "Permanent Marker",
+    "Scale",
+    "Sharpner",
+    "Slate"
   ],
   "products": [
     {
@@ -103,6 +115,214 @@
       "mrp": 60,
       "price": 46,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAiUA5T71HUb9twLSfFQhHGccU3aPzUw6nPw&s"
+    },
+    {
+      "id": 14,
+      "category": "Notebook",
+      "name": "Long Size Notebook - 112P - Ruled - SBS",
+      "mrp": 35,
+      "price": 25,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0Xkq-qcpwFtv80uI8EhL6AKpoMcGaYtt0Q&s"
+    },
+    {
+      "id": 15,
+      "category": "Notebook",
+      "name": "Long Size Notebook - 112P - Unruled - SBS",
+      "mrp": 35,
+      "price": 25,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv0Xkq-qcpwFtv80uI8EhL6AKpoMcGaYtt0Q&s"
+    },
+    {
+      "id": 16,
+      "category": "Book Cover",
+      "name": "Book Cover - PVC - 3 Yards",
+      "mrp": 60,
+      "price": 42,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjgXnimqUk4cAxPmYK1DqLs1Z7tCEXZzhxPw&s"
+    },
+    {
+      "id": 17,
+      "category": "0.7 Tip Pencil",
+      "name": "Tip Pencil - 0.7 - Flair - Avengers",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQea6w3_xk-FcPYryaMQZ0tQO-nrd6eMHUE9Q&s"
+    },
+    {
+      "id": 18,
+      "category": "0.7 Tip Pencil",
+      "name": "Tip Pencil - 0.7 - Unomax - Starwars",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxZPFY3Ib_dqiTJf_gtHxURjtbw_YCyjbelA&s"
+    },
+    {
+      "id": 19,
+      "category": "0.7 Tip Pencil",
+      "name": "Tip Pencil - 0.7 - Doms - Baymech",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKs1xTF8OmW7nmaV8OSdLQHJLtz_vwjDNk2w&s"
+    },
+    {
+      "id": 20,
+      "category": "Cartridge Pen",
+      "name": "Cartridge Pen - Jainex",
+      "mrp": 20,
+      "price": 12,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
+    },
+    {
+      "id": 21,
+      "category": "Geometry",
+      "name": "All in One Geometry Tool",
+      "mrp": 40,
+      "price": 25,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2J-UbGy9352ikUxq7frPjAp2RjuAhFwHKnw&s"
+    },
+    {
+      "id": 22,
+      "category": "Pencil Box",
+      "name": "2-in-1 Pencil Box with LCD Writing Pad",
+      "mrp": 200,
+      "price": 120,
+      "img": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTVLRhlfO1XuU2rxC-GDV8wjgqM_LG8jhR1_YKo72ZOAPWCIHMHiat9cD-Ynvf4hkK_6hWshjlDZuSYxj2kMywQ9zcaVQpPuFzY-J0bJHybEz9tJdH4uoKJvA"
+    },
+    {
+      "id": 23,
+      "category": "Cartridge Pen",
+      "name": "Erasable Cartridge Pen",
+      "mrp": 50,
+      "price": 35,
+      "img": "https://i.etsystatic.com/11920103/r/il/b028c4/3173115694/il_794xN.3173115694_k24d.jpg"
+    },
+    {
+      "id": 24,
+      "category": [
+        "Eraser",
+        "Sharpner"
+      ],
+      "name": "2-in-1 - Sharpner with Eraser - Doms - ErasNer",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9KWZLHAwSWEt1_O2EeT9x05Vew_xJaT2iNA&s"
+    },
+    {
+      "id": 25,
+      "category": [
+        "Eraser",
+        "Geometry",
+        "Kit",
+        "Pencil",
+        "Scale",
+        "Sharpner"
+      ],
+      "name": "Pencil Kit - C3 - PreP School Kit",
+      "mrp": 12,
+      "price": 11,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4mNLSE-0r97KK9Ae0jPnc0rDIhMDDiLQIlw&s"
+    },
+    {
+      "id": 26,
+      "category": "Sharpner",
+      "name": "Sharpner - Flair - Rock (Pack of 2)",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEAV1hTFoRodFgGtLhMMHFSmOHFluGyKj3vw&s"
+    },
+    {
+      "id": 27,
+      "category": "Book Cover",
+      "name": "Self-Adhesive Book Cover (3 Piece Set of small, King, Long Size)",
+      "mrp": 30,
+      "price": 21,
+      "img": "https://m.media-amazon.com/images/I/71T+FN8pwLL._SX569_.jpg"
+    },
+    {
+      "id": 28,
+      "category": [
+        "Geometry",
+        "Scale"
+      ],
+      "name": "Short Scale - Hauser",
+      "mrp": 5,
+      "price": 4,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjRplgNTQJYQA9-q_WXipF42z-0Y-d347jzQ&s"
+    },
+    {
+      "id": 29,
+      "category": "0.7 Tip Pencil",
+      "name": "Tip Pencil - 0.7 - Hauser",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-aUyUS5ebWQB1PjNzRbyil6gFiOeMqtYA4g&s"
+    },
+    {
+      "id": 30,
+      "category": "Permanent Marker",
+      "name": "Permanent Marker - Blue - Bold tip - Hauser - XO",
+      "mrp": 20,
+      "price": 15,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKX9xKpwS6JJHiS3eUuI1nEmUKMkHiFsJ8jg&s"
+    },
+    {
+      "id": 31,
+      "category": "Permanent Marker",
+      "name": "Permanent Marker - Black - Bold tip - Hauser - XO",
+      "mrp": 20,
+      "price": 15,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKX9xKpwS6JJHiS3eUuI1nEmUKMkHiFsJ8jg&s"
+    },
+    {
+      "id": 32,
+      "category": "Battery",
+      "name": "AA Battery - Nippo - Ignite",
+      "mrp": 20,
+      "price": 11,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUyqxXbwgs5V6r27fqlzwb5G6Me2CTb32YpQ&s"
+    },
+    {
+      "id": 33,
+      "category": "Battery",
+      "name": "AAA Battery - Nippo - Ignite",
+      "mrp": 18,
+      "price": 11,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqCZ-po3r3V1aahDBcHTLmu1hb7kN-3DxDUw&s"
+    },
+    {
+      "id": 34,
+      "category": [
+        "Pencil",
+        "Slate"
+      ],
+      "name": "Slate Pencil",
+      "mrp": 10,
+      "price": 8,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDjyHt_0W36HAnDxaCeMnQSv4ch8T_72HMKg&s"
+    },
+    {
+      "id": 35,
+      "category": "Glue",
+      "name": "Glue Stick - Jainex",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6RvQPHr_ZJOm6YaoVWX8OgU9lSLqHV6-z5A&s"
+    },
+    {
+      "id": 36,
+      "category": "Notebook",
+      "name": "Small Note - DLX - 100P - Ruled",
+      "mrp": 20,
+      "price": 14,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
+    },
+    {
+      "id": 37,
+      "category": "Paper",
+      "name": "A4 Paper - 70 GSM - TNPL",
+      "mrp": 335,
+      "price": 230,
+      "img": "https://newemart.com/wp-content/uploads/2023/01/tnpl.jpg"
     }
   ]
 }
