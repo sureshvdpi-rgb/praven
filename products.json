@@ -1,5 +1,6 @@
 {
   "categories": [
+    "***Hot Selling***",
     "0.7 Tip Pencil",
     "2mm Tip Pencil",
     "Activity",
@@ -57,7 +58,10 @@
     },
     {
       "id": 6,
-      "category": "Pencil",
+      "category": [
+        "***Hot Selling***",
+        "Pencil"
+      ],
       "name": "Apsara Pencil - Platinum",
       "mrp": 60,
       "price": 47,
@@ -169,7 +173,10 @@
     },
     {
       "id": 20,
-      "category": "Cartridge Pen",
+      "category": [
+        "***Hot Selling***",
+        "Cartridge Pen"
+      ],
       "name": "Cartridge Pen - Jainex",
       "mrp": 20,
       "price": 12,
@@ -177,7 +184,10 @@
     },
     {
       "id": 21,
-      "category": "Geometry",
+      "category": [
+        "***Hot Selling***",
+        "Geometry"
+      ],
       "name": "All in One Geometry Tool",
       "mrp": 40,
       "price": 25,
@@ -185,7 +195,10 @@
     },
     {
       "id": 22,
-      "category": "Pencil Box",
+      "category": [
+        "***Hot Selling***",
+        "Pencil Box"
+      ],
       "name": "2-in-1 Pencil Box with LCD Writing Pad",
       "mrp": 200,
       "price": 120,
@@ -193,7 +206,10 @@
     },
     {
       "id": 23,
-      "category": "Cartridge Pen",
+      "category": [
+        "***Hot Selling***",
+        "Cartridge Pen"
+      ],
       "name": "Erasable Cartridge Pen",
       "mrp": 50,
       "price": 35,
@@ -202,6 +218,7 @@
     {
       "id": 24,
       "category": [
+        "***Hot Selling***",
         "Eraser",
         "Sharpner"
       ],
@@ -235,7 +252,10 @@
     },
     {
       "id": 27,
-      "category": "Book Cover",
+      "category": [
+        "***Hot Selling***",
+        "Book Cover"
+      ],
       "name": "Self-Adhesive Book Cover (3 Piece Set of small, King, Long Size)",
       "mrp": 30,
       "price": 21,
