@@ -9,6 +9,7 @@
     "Battery",
     "Book Cover",
     "Cartridge Pen",
+    "Combo",
     "Eraser",
     "Geometry",
     "Glue",
@@ -575,11 +576,52 @@
     },
     {
       "id": 65,
-      "category": "Art",
+      "category": [
+        "Art",
+        "Office Stationary"
+      ],
       "name": "Chart Marker - Luxar (Note: Colour will be confirmed via Whatsapp)",
       "mrp": 10,
       "price": 8,
       "img": "https://rukminim2.flixcart.com/image/1366/1366/xif0q/marker-highlighter/e/y/k/-original-imah586sg7wwzt73.jpeg?q=90"
+    },
+    {
+      "id": 66,
+      "category": [
+        "2mm Tip Pencil",
+        "Combo"
+      ],
+      "name": "2mm Tip Pencil with 2 box of Tip",
+      "mrp": 20,
+      "price": 18,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHOzS0V1RgHfwPhvEVZ9oFWyQEHlb84l5ZPA&s"
+    },
+    {
+      "id": 67,
+      "category": "Office Stationary",
+      "name": "Correction Pen",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU7gvvnoV18o_hnviaqnSSBH3QqNDWtKdzPQ&s"
+    },
+    {
+      "id": 68,
+      "category": "Office Stationary",
+      "name": "Courier Cover (11*5) Pack of 10",
+      "mrp": 20,
+      "price": 15.5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTegleu-H_wrYoPBxqCqWxuE0N1-plDYTMEJw&s"
+    },
+    {
+      "id": 69,
+      "category": [
+        "***Hot Selling***",
+        "Cartridge Pen"
+      ],
+      "name": "Info Cartridge Pen",
+      "mrp": 50,
+      "price": 41.5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKIrfnrwYOZR3TPNsZVsSrhxxZ_kGL67GLUw&s"
     }
   ]
 }
