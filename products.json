@@ -29,15 +29,7 @@
     {
       "id": 1,
       "category": "Notebook",
-      "name": "Apsara Long Notebook - Unruled (160 Pages)",
-      "mrp": 60,
-      "price": 45,
-      "img": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/ciw/2026/2/24/e631676a-af02-4e06-9341-6d755ae40a81_CML8A50YWC_MN_23022026.png"
-    },
-    {
-      "id": 2,
-      "category": "Notebook",
-      "name": "Apsara Long Notebook - Ruled (160 Pages)",
+      "name": "Apsara Long Notebook - (Ruled & Unruled) - 160 Pages [varient will be updated via whatsapp]",
       "mrp": 60,
       "price": 45,
       "img": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/ciw/2026/2/24/e631676a-af02-4e06-9341-6d755ae40a81_CML8A50YWC_MN_23022026.png"
@@ -53,9 +45,9 @@
     {
       "id": 5,
       "category": "Notebook",
-      "name": "King size Note book",
+      "name": "King size Note book (Ruled, Unruled, 4 Ruled) [varient will be updated via whatsapp]",
       "mrp": 40,
-      "price": 30,
+      "price": 27,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_9G3hZ0ME2d4BgMXiHvjSql0c0RfXAW3ckQ&s"
     },
     {
@@ -285,15 +277,7 @@
     {
       "id": 30,
       "category": "Permanent Marker",
-      "name": "Permanent Marker - Blue - Bold tip - Hauser - XO",
-      "mrp": 20,
-      "price": 15,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKX9xKpwS6JJHiS3eUuI1nEmUKMkHiFsJ8jg&s"
-    },
-    {
-      "id": 31,
-      "category": "Permanent Marker",
-      "name": "Permanent Marker - Black - Bold tip - Hauser - XO",
+      "name": "Permanent Marker - (Blue, Black) - Bold tip - Hauser - XO [colour will be updated via whatsapp]",
       "mrp": 20,
       "price": 15,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKX9xKpwS6JJHiS3eUuI1nEmUKMkHiFsJ8jg&s"
@@ -336,7 +320,7 @@
     {
       "id": 36,
       "category": "Notebook",
-      "name": "Small Note - DLX - 100P - Ruled",
+      "name": "Small Note - DLX - 100P - (Ruled, Unruled, 2 ruled,4 ruled, checked & maths) [varient will be updated via whatsapp]",
       "mrp": 20,
       "price": 14,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
@@ -503,17 +487,9 @@
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRX3ZZ9A7ZVnPqZFGPAL2FSwodlYjXJJTfa2g&s"
     },
     {
-      "id": 56,
-      "category": "Cartridge Pen",
-      "name": "Cartridge - Blue - Flair (3 piece pack)",
-      "mrp": 10,
-      "price": 9,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg6aZseVl7vrVulwFneJ5ReJEsJsy2lWl-qA&s"
-    },
-    {
       "id": 57,
       "category": "Cartridge Pen",
-      "name": "Cartridge - Black - Flair (3 piece pack)",
+      "name": "Cartridge - (Blue & Black) - Flair (3 piece pack) [colour will be updated via whatsapp]",
       "mrp": 10,
       "price": 9,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfoAJLggCbQ_se8m4aNyiCnEon6cFxVoW72Q&s"
@@ -529,34 +505,18 @@
     {
       "id": 59,
       "category": "Cartridge Pen",
-      "name": "Small cartridge - Blue (10 piece pack)",
+      "name": "Small cartridge - (Blue & Black) - 10 piece pack [colour will be updated via whatsapp]",
       "mrp": 30,
       "price": 15,
       "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTBaSJTUBeo2RvqJmrrSt3OIxybxlOYZIh1tPL59rRtzgxDGfJ6pJnM826BSeQwyRRE2i_8ZzC25JKLC2aq_RHLtioHUzYDpft9khGtOoi2aFXilDbWhrviQQ"
     },
     {
-      "id": 60,
-      "category": "Cartridge Pen",
-      "name": "Small cartridge - Black (10 piece pack)",
-      "mrp": 30,
-      "price": 15,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
-    },
-    {
       "id": 61,
       "category": "Cartridge Pen",
-      "name": "Standard cartridge - Black (10 piece pack)",
+      "name": "Standard cartridge - (Blue & Black) - 10 piece pack [colour will be updated via whatsapp]",
       "mrp": 40,
       "price": 20,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUQi87D_l3OW2sb0mX9pdjRXWljMpEnhfgrw&s"
-    },
-    {
-      "id": 62,
-      "category": "Cartridge Pen",
-      "name": "Standard cartridge - Blue (10 piece pack)",
-      "mrp": 40,
-      "price": 20,
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxdAOY_-vITFVI-ej84s2U_ErxhOly-z3y_Q&s"
     },
     {
       "id": 63,
@@ -622,6 +582,82 @@
       "mrp": 50,
       "price": 41.5,
       "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKIrfnrwYOZR3TPNsZVsSrhxxZ_kGL67GLUw&s"
+    },
+    {
+      "id": 4,
+      "category": [
+        "***Hot Selling***",
+        "Art"
+      ],
+      "name": "Oil Pastels - 50 Shades - Apsara",
+      "mrp": 230,
+      "price": 192,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4ZXO5A0ACg96nj15o7KhbZgLWD2OK4t-duA&s"
+    },
+    {
+      "id": 70,
+      "category": [
+        "***Hot Selling***",
+        "Art"
+      ],
+      "name": "Oil Pastels - 26 Shades - Apsara",
+      "mrp": 120,
+      "price": 100,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeRNvsSgR1swTcu1Rt3P1vZ45oP-f3HewWtg&s"
+    },
+    {
+      "id": 71,
+      "category": "Ballpoint Pen",
+      "name": "Ball Point Pen / Nataraj - SuperX / Blue & Black / 5 piece pack [colour will be updated via whatsapp]",
+      "mrp": 25,
+      "price": 22,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTT5AE9Ye0bKeBic4j1G7z_eK1ViyQPoQUyQ&s"
+    },
+    {
+      "id": 72,
+      "category": "Art",
+      "name": "Drawing Note / 36P / Apsara",
+      "mrp": 32,
+      "price": 21.5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1iqRg5zEwh8DtIrFEcEsHdi4wjnozc6U0ww&s"
+    },
+    {
+      "id": 73,
+      "category": "Art",
+      "name": "Wax Crayans / 10 Shades / Apsara",
+      "mrp": 10,
+      "price": 8.5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhAB_b9N_FpV424RqrCWY1h7kypJyxGMvd1Q&s"
+    },
+    {
+      "id": 74,
+      "category": "Notebook",
+      "name": "Apsara Long Notebook / 184 Pages / Ruled & Unruled [ varient will be updated via whatsapp]",
+      "mrp": 70,
+      "price": 50,
+      "img": "https://instamart-media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,h_600/NI_CATALOG/IMAGES/ciw/2026/2/24/e631676a-af02-4e06-9341-6d755ae40a81_CML8A50YWC_MN_23022026.png"
+    },
+    {
+      "id": 75,
+      "category": [
+        "***Hot Selling***",
+        "Pencil Box"
+      ],
+      "name": "Pencil Box / Steel top - Naruto",
+      "mrp": 85,
+      "price": 56,
+      "img": "https://i.ibb.co/Vp3V2WSm/Naruto-box.jpg"
+    },
+    {
+      "id": 76,
+      "category": [
+        "***Hot Selling***",
+        "Cartridge Pen"
+      ],
+      "name": "Cart. Pen / Avenger - Jet",
+      "mrp": 105,
+      "price": 69,
+      "img": "https://i.ibb.co/3ySpwg1b/Jet.jpg"
     }
   ]
 }
