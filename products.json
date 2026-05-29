@@ -13,6 +13,7 @@
     "Eraser",
     "Geometry",
     "Glue",
+    "Ink Eraser",
     "Kit",
     "Notebook",
     "Office Stationary",
@@ -52,10 +53,7 @@
     },
     {
       "id": 6,
-      "category": [
-        "***Hot Selling***",
-        "Pencil"
-      ],
+      "category": "Pencil",
       "name": "Apsara Pencil - Platinum",
       "mrp": 60,
       "price": 46,
@@ -167,10 +165,7 @@
     },
     {
       "id": 20,
-      "category": [
-        "***Hot Selling***",
-        "Cartridge Pen"
-      ],
+      "category": "Cartridge Pen",
       "name": "Cartridge Pen - Jainex",
       "mrp": 20,
       "price": 12,
@@ -212,7 +207,6 @@
     {
       "id": 24,
       "category": [
-        "***Hot Selling***",
         "Eraser",
         "Sharpner"
       ],
@@ -658,6 +652,47 @@
       "mrp": 105,
       "price": 69,
       "img": "https://i.ibb.co/3ySpwg1b/Jet.jpg"
+    },
+    {
+      "id": 77,
+      "category": [
+        "***Hot Selling***",
+        "Cartridge Pen"
+      ],
+      "name": "Sword Cartridge Pen",
+      "mrp": 60,
+      "price": 44.5,
+      "img": "https://i.ibb.co/4nZWmY1S/sword.jpg"
+    },
+    {
+      "id": 78,
+      "category": [
+        "***Hot Selling***",
+        "Pencil"
+      ],
+      "name": "Toy Cap Pencil",
+      "mrp": 15,
+      "price": 9,
+      "img": "https://i.ibb.co/JwfF6Db7/TH.jpg"
+    },
+    {
+      "id": 79,
+      "category": "Cartridge Pen",
+      "name": "Pocket Cartridge / Hauser (Blue & Black) [colour will be updated via whatsapp]",
+      "mrp": 10,
+      "price": 8.5,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBVSawX2cCDvfz_HuCCja25vSQkjHlJzq87g&s"
+    },
+    {
+      "id": 80,
+      "category": [
+        "***Hot Selling***",
+        "Ink Eraser"
+      ],
+      "name": "Hauser Grip-it Combo (Grip-it Fountain Pen, Ink eraser and one pack Cartridge)",
+      "mrp": 110,
+      "price": 93,
+      "img": "https://i.ibb.co/35tLRdyB/Gemini-Generated-Image-c6me2ec6me2ec6me.png"
     }
   ]
 }
