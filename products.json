@@ -10,7 +10,9 @@
     "Book Cover",
     "Cartridge Pen",
     "Combo",
+    "Correction Pen",
     "Eraser",
+    "Exam pad",
     "Geometry",
     "Glue",
     "Ink Eraser",
@@ -687,12 +689,95 @@
       "id": 80,
       "category": [
         "***Hot Selling***",
+        "Cartridge Pen",
+        "Combo",
+        "Correction Pen",
         "Ink Eraser"
       ],
       "name": "Hauser Grip-it Combo (Grip-it Fountain Pen, Ink eraser and one pack Cartridge)",
       "mrp": 110,
       "price": 93,
       "img": "https://i.ibb.co/35tLRdyB/Gemini-Generated-Image-c6me2ec6me2ec6me.png"
+    },
+    {
+      "id": 81,
+      "category": [
+        "Cartridge Pen",
+        "Correction Pen",
+        "Ink Eraser"
+      ],
+      "name": "Ink Eraser / Correction Pen",
+      "mrp": 30,
+      "price": 24.5,
+      "img": "https://m.media-amazon.com/images/I/417QYNtKeyL._SY300_SX300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": 82,
+      "category": [
+        "Cartridge Pen",
+        "Correction Pen",
+        "Ink Eraser"
+      ],
+      "name": "Ink Eraser / Correction Pen",
+      "mrp": 10,
+      "price": 9,
+      "img": "https://i.ibb.co/NggvpxCT/Gemini-Generated-Image-nw39ydnw39ydnw39.png"
+    },
+    {
+      "id": 83,
+      "category": [
+        "Correction Pen",
+        "Office Stationary"
+      ],
+      "name": "Hauser Correction Pen cp 251 / Whitener",
+      "mrp": 30,
+      "price": 21,
+      "img": "https://truewholesale.in/storage/product-images/17417721110.jpg"
+    },
+    {
+      "id": 84,
+      "category": "Office Stationary",
+      "name": "Kangaro Stapler / HD-10",
+      "mrp": 75,
+      "price": 42.5,
+      "img": "https://static1.industrybuying.com/products/office-supplies/staplers-removers-punches/staplers/OFF.STA.830159223_1743675325644.webp"
+    },
+    {
+      "id": 85,
+      "category": "Office Stationary",
+      "name": "Kangaro Stapler Pin / No.10-1M (Pack of 2)",
+      "mrp": 24,
+      "price": 16,
+      "img": "https://static1.industrybuying.com/products/office-supplies/staplers-removers-punches/stapler-pin/OFF.STA.63311108_1756985220111.webp"
+    },
+    {
+      "id": 86,
+      "category": [
+        "Combo",
+        "Office Stationary"
+      ],
+      "name": "Stapler Combo (Kangaro Stapler - HD-10 + 1 box of Stapler Pin)",
+      "mrp": 87,
+      "price": 50,
+      "img": "https://i.ibb.co/qLtWKdTx/Gemini-Generated-Image-3a0fhp3a0fhp3a0f.png"
+    },
+    {
+      "id": 87,
+      "category": [
+        "***Hot Selling***",
+        "Ballpoint Pen",
+        "Combo",
+        "Eraser",
+        "Exam pad",
+        "Notebook",
+        "Pencil",
+        "Scale",
+        "Sharpner"
+      ],
+      "name": "Affordable High School Combo (i Exam Pad, 2 Long Notebook (Ruled+Unruled), 2 Ball Pens (Blue+Black), Long Scale, Pencil, Sharpner, Eraser (Brand may vary)",
+      "mrp": 143,
+      "price": 108,
+      "img": "https://i.ibb.co/wNTpJXMm/Note-Combo.png"
     }
   ]
 }
